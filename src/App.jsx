@@ -4,18 +4,18 @@ import Carrinho from "./pages/Carrinho";
 import PaginaErro from "./pages/PaginaErro";
 
 import "./App.css";
-import { CarrinhoContext } from "./contexts/CarrinhoContext";
+import { CarrinhoProvider } from "./contexts/CarrinhoContext";
 
 function App() {
     return (
         <BrowserRouter>
-            <CarrinhoContext>
+            <CarrinhoProvider>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/carrinho" element={<Carrinho />} />
                     <Route path="*" element={<PaginaErro />} />
                 </Routes>
-            </CarrinhoContext>
+            </CarrinhoProvider>
         </BrowserRouter>
     );
 }
